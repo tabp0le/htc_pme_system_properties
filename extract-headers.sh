@@ -23,6 +23,7 @@ do
 	grep ^ro.build.fingerprint $i
 	grep ^ro.build.product $i
 	grep ^ro.product.device $i
+	grep ^ro.product.model $i
 	egrep -v '^[[:space:]]*#' $i | \
 	    egrep '(radio|ril|telephony|gsm|cdma).*=' | \
 	    egrep -v ^rild.libpath=
