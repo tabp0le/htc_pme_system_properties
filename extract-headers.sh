@@ -25,7 +25,7 @@ do
 	grep ^ro.product.device $i
 	grep ^ro.product.model $i
 	egrep -v '^[[:space:]]*#' $i | \
-	    egrep '(radio|ril|telephony|gsm|cdma).*=' | \
+	    egrep '(radio|ril|telephony|\.phone|gsm|cdma).*=' | \
 	    egrep -v ^rild.libpath=
       ) | sed 's/.*/"&\\n"/'
       echo ";"
